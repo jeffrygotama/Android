@@ -1,2 +1,1 @@
-# Android
-# Making Stopwatch using Android Studio
+# Assignment Android
