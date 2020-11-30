@@ -37,7 +37,6 @@ public class DelayedMessageService extends IntentService {
     public void showText(final String text){
         Log.v("DelayedMessageService", "The message is: "+text);
 
-//        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         NotificationManager notificationManager = null;
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -47,8 +46,10 @@ public class DelayedMessageService extends IntentService {
             NotificationChannel channel = new NotificationChannel(CHANNEL_ID, name, importance);
             channel.setDescription(description);
 
-            notificationManager = (NotificationManager) getSystemService(NotificationManager.class);
+            notificationManager = getSystemService(NotificationManager.class);
             notificationManager.createNotificationChannel(channel);
+        }else{
+            notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         }
 
         // create notification builder
@@ -68,6 +69,7 @@ public class DelayedMessageService extends IntentService {
         builder.setContentIntent(actionPending);
 
         // issue the notification
+//        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         notificationManager.notify(NOTIFICATION_ID, builder.build());
     }
 }
