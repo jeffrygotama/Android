@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Joke</string>
+    <string name="question">What is the secret to become Great Detective?</string>
+    <string name="response">Observation Skill!</string>
+</resources>
