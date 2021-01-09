@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity">
+
+    <Button
+        android:id="@+id/bt_portoFirme"
+        android:text="@string/ezy1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:onClick="onClick_ezy_3"
+        android:layout_marginLeft="7dp" />
+    <Button
+        android:id="@+id/bt_vicosa"
+        android:text="@string/ezy2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/bt_portoFirme"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:onClick="onClick_ezy_1"
+        android:layout_toRightOf="@id/bt_portoFirme" />
+    <Button
+        android:id="@+id/bt_dpi"
+        android:text="@string/ezy3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/bt_vicosa"
+        android:layout_marginEnd="7dp"
+        android:onClick="onClick_ezy_2"
+        android:layout_marginRight="7dp"
+        android:layout_toRightOf="@id/bt_vicosa" />
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_below="@id/bt_dpi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bt_myLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@android:drawable/ic_menu_mylocation"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:layout_marginEnd="20dp"
+        android:focusable="true"
+        android:onClick="onClick_myLocation"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bt_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bt_myLocation"
+        android:layout_alignStart="@id/bt_myLocation"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/light_gray"
+        android:clickable="true"
+        android:src="@android:drawable/ic_menu_mapmode"
+        android:onClick="onClick_changeMap"
+        android:layout_alignLeft="@id/bt_myLocation" />
+
+
+</RelativeLayout>

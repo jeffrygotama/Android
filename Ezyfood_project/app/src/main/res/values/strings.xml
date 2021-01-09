@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Ezyfood_project</string>
+    <string name="my_location">My location</string>
+
+    <string name="mart_1">Mart 01</string>
+    <string name="mart_2">Mart 02</string>
+    <string name="mart_3">Mart 03</string>
+
+    <string name="close_app">Close application</string>
+
+    <string name="ezy1">Mart 01</string>
+    <string name="ezy2">Mart 02</string>
+    <string name="ezy3">Mart 03</string>
+
+    <string name="allow_gps">Please allow the application to use GPS!</string>
+    <string name="getting_gps">Getting the GPS signal… try again in a few moments.</string>
+    <string name="distance_ap">Distance to my location:</string>
+
+    <string name="title_activity_maps">Map</string>
+</resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/bg">
+
+    <TextView
+        android:background="#333"
+        android:textColor="#ffebcd"
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:gravity="center_horizontal" />
+    <Button
+        android:layout_marginBottom="20dp"
+        android:background="#333"
+        android:textColor="#ffebcd"
+        android:id="@+id/myorder_btn_order"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:text="My Order" />
+
+    <ImageView
+        android:id="@+id/databaseImageOrder"
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:background="#333"
+        android:scaleType="centerCrop"
+        android:textColor="#ffebcd" />
+
+    <TextView
+        android:id="@+id/databaseNameOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="test1"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="100dp" />
+
+    <TextView
+        android:id="@+id/databasePriceOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="test2"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="127dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantity: "
+        />
+    <LinearLayout>
+        <EditText
+            android:id="@+id/quantityOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="1" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="121dp"
+        android:background="#333"
+        android:textColor="#ffebcd">
+        <Button
+            android:background="#333"
+            android:textColor="#ffebcd"
+            android:id="@+id/orderMore_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order More" />
+    </LinearLayout>
+</TableLayout>
