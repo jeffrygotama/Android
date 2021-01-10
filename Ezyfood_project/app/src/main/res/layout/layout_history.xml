@@ -19,7 +19,6 @@
             tools:layout_editor_absoluteX="25dp"
             tools:layout_editor_absoluteY="127dp" />
     </TableRow>
-
     <TextView
         android:id="@+id/addressMyOrder_lat"
         android:layout_width="200dp"
@@ -37,6 +36,13 @@
         android:textSize="30sp"
         tools:layout_editor_absoluteX="25dp"
         tools:layout_editor_absoluteY="127dp" />
+
+    <ImageView
+        android:id="@+id/ImageMyOrder_hist"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop" />
 
     <TextView
         android:id="@+id/dateMyOrder"

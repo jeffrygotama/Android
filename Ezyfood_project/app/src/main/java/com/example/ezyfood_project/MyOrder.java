@@ -57,7 +57,7 @@ public class MyOrder extends AppCompatActivity {
     public void openpay(){
         Date date = new Date();
         for(int i = 0;i< Order.databasesOrder.size(); i++){
-            HistoryOrder.histo.add(new History(Order.databasesOrder.get(i).getName(), Order.databasesOrder.get(i).getPrice(), Order.databasesOrder.get(i).getQuantity(), MapsActivity.list.get(MapsActivity.index), date));
+            HistoryOrder.histo.add(new History(Order.databasesOrder.get(i).getName(), Order.databasesOrder.get(i).getPrice(), Order.databasesOrder.get(i).getQuantity(), MapsActivity.list.get(MapsActivity.index), date, Order.databasesOrder.get(i).getImage()));
         }
         Order.databasesOrder.clear();
         Intent intent = new Intent(this, MainActivity.class);

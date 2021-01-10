@@ -42,7 +42,7 @@ public class HistoryAdapter extends BaseAdapter {
             final LayoutInflater layoutInflater = LayoutInflater.from(context);
             view = layoutInflater.inflate(R.layout.layout_history, null);
         }
-
+        final ImageView MOimageView = (ImageView) view.findViewById(R.id.ImageMyOrder_hist);
         TextView MOdateView = (TextView) view.findViewById(R.id.dateMyOrder);
         TextView MOaddressView_lat = (TextView) view.findViewById(R.id.addressMyOrder_lat);
         TextView MOaddressView_long = (TextView) view.findViewById(R.id.addressMyOrder_long);
@@ -53,7 +53,7 @@ public class HistoryAdapter extends BaseAdapter {
 
         if(meet == true){
             MOdateView.setText(h.getDate().toString());
-            MOaddressView.setText("Address Sender Market");
+            MOaddressView.setText("Address Sender Market "+(MapsActivity.index+1));
             MOaddressView_lat.setText("Latitude: "+String.valueOf(h.getAddress().latitude));
             MOaddressView_long.setText("Longitude: "+String.valueOf(h.getAddress().longitude));
 
@@ -70,7 +70,7 @@ public class HistoryAdapter extends BaseAdapter {
 
         }
 
-
+        MOimageView.setImageResource(h.getImage());
         MOnameView.setText(h.getName());
         MOpriceView.setText(h.getPrice() + " x " + h.getQuantity());
 

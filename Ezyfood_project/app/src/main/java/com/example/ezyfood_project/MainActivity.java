@@ -24,11 +24,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if(met){
-            MapsActivity.add_to_list();
-            met = false;
-        }
-//        Toast.makeText(MainActivity.this, "Size: "+MapsActivity.list.size(), Toast.LENGTH_SHORT + 10).show();
 
         drinks_btn = (Button) findViewById(R.id.drinks_btn);
         drinks_btn.setOnClickListener(new View.OnClickListener() {

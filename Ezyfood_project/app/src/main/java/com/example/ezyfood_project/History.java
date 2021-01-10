@@ -10,6 +10,7 @@ public class History{
     private int quantity;
     private LatLng address;
     private Date date;
+    private int image;
 
     public History(String name, int price, int quantity, LatLng address, Date date) {
         this.name = name;
@@ -17,6 +18,15 @@ public class History{
         this.quantity = quantity;
         this.address = address;
         this.date = date;
+    }
+
+    public History(String name, int price, int quantity, LatLng address, Date date, int image) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+        this.address = address;
+        this.date = date;
+        this.image = image;
     }
 
     public String getName() {
@@ -57,5 +67,13 @@ public class History{
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public int getImage() {
+        return image;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
     }
 }

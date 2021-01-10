@@ -12,6 +12,7 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,8 +42,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private final static LatLng mart_2 = new LatLng(-20.672017, -43.081624);
     private final static LatLng mart_3 = new LatLng(-20.764962, -42.868489);
-    public LatLng myLocation;
-
+    public static LatLng myLocation;
+    public static String providerss;
     public boolean GPSLoaded = false;
     LocationManager locationManager;
     String latitude, longitude;
@@ -105,10 +106,25 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         list.add(mart_3);
     }
 
+    public void openmainclass(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+        list.add(mart_1);
+        list.add(mart_2);
+        list.add(mart_3);
+        Button mymain_btn = (Button) findViewById(R.id.main_btn);
+        mymain_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openmainclass();
+            }
+        });
 
         // Location Manager
         lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
@@ -208,7 +224,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //        double distance = temp.distanceTo(test) / 1000;
         DecimalFormat df = new DecimalFormat("0.##");
 
-        Toast.makeText(this, getString(R.string.distance_ap) + " from Mart "+index+ " is " + df.format(min) +" km", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, getString(R.string.distance_ap) + " from Mart "+(index+1)+ " is " + df.format(min) +" km", Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -233,7 +249,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         Intent it = getIntent();
         mMap = googleMap;
-
+        it.putExtra("local","mart2");
         mMap.addMarker(new MarkerOptions().position(mart_1).title(getString(R.string.mart_1)));
         mMap.addMarker(new MarkerOptions().position(mart_2).title(getString(R.string.mart_2)));
         mMap.addMarker(new MarkerOptions().position(mart_3).title(getString(R.string.mart_3)));

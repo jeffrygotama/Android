@@ -36,6 +36,21 @@
         android:layout_marginRight="7dp"
         android:layout_toRightOf="@id/bt_vicosa" />
 
+    <Button
+        android:id="@+id/main_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_toEndOf="@id/bt_vicosa"
+        android:layout_toRightOf="@id/bt_vicosa"
+        android:onClick="onClick_ezy_2"
+        android:text="@string/main"
+        android:backgroundTint="@color/blue_700"
+        android:textColor="@android:color/black"/>
+
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:map="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
